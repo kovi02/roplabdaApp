@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "868290461264",
+    "project_id": "roplabdaapp",
+    "storage_bucket": "roplabdaapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868290461264:android:18fc5eedb5301b64305b55",
+        "android_client_info": {
+          "package_name": "com.example.roplabdaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "868290461264-7pat6arlqenkfmbmad6dtp78jnot9ki8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.roplabdaapp",
+            "certificate_hash": "1ac12a422ba1811eebbf925d8d1ea129291c4b78"
+          }
+        },
+        {
+          "client_id": "868290461264-n8kfdebn0jasmf601be3gn26mqbl9u37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtQ83L-YGp4Lm8ZR47FQY6P7JBzTEui4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "868290461264-n8kfdebn0jasmf601be3gn26mqbl9u37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

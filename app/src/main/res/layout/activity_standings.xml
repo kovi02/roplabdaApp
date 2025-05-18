@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tabella kiválasztása"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"/>
+
+    <Spinner
+        android:id="@+id/spinnerSelectTournament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnLoadStandings"
+        android:text="Tabella betöltése"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4CAF50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnBackToMain"
+        android:text="Vissza a főoldalra"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#4CAF50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStandings"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layoutAnimation="@anim/layout_animation"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>

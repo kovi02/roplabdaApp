@@ -1,31 +1,34 @@
 package com.example.roplabdaapp;
 
-import android.os.Bundle;
-import android.util.Log;
-
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class appListActivity extends AppCompatActivity {
-        private static final String LOG_TAG = appListActivity.class.getName();
-        private FirebaseUser user;
-        private FirebaseAuth mAuth;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_app_list);
-            mAuth = FirebaseAuth.getInstance();
-            // mAuth.signOut();
-            user = FirebaseAuth.getInstance().getCurrentUser();
+    Button btnAddTeam, btnViewTeams, btnTournaments, btnStandings;
 
-            if(user != null) {
-                Log.d(LOG_TAG, "Authenticated user!");
-            } else {
-                Log.d(LOG_TAG, "Unauthenticated user!");
-                finish();
-            }
-        }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_app_list);
+
+        btnAddTeam = findViewById(R.id.btnAddTeam);
+        btnViewTeams = findViewById(R.id.btnViewTeams);
+        btnTournaments = findViewById(R.id.btnTournaments);
+        btnStandings = findViewById(R.id.btnStandings);
+
+        Button btnAddMatch = findViewById(R.id.btnAddMatch);
+        btnAddMatch.setOnClickListener(v -> {
+            Intent intent = new Intent(this, AddMatchActivity.class);
+            startActivity(intent);
+        });
+
+        btnAddTeam.setOnClickListener(v -> startActivity(new Intent(this, AddTeamActivity.class)));
+        btnViewTeams.setOnClickListener(v -> startActivity(new Intent(this, TeamListActivity.class)));
+        btnTournaments.setOnClickListener(v -> startActivity(new Intent(this, TournamentActivity.class)));
+        btnStandings.setOnClickListener(v -> startActivity(new Intent(this, StandingsActivity.class)));
     }
+}

@@ -97,8 +97,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void startApp(/* registered used class */) {
         Intent intent = new Intent(this, appListActivity.class);
-        intent.putExtra("SECRET_KEY", SECRET_KEY);
+        intent.putExtra("email", userEmailEditText.getText().toString().trim());
+        intent.putExtra("password", passwordEditText.getText().toString().trim());
         startActivity(intent);
+        finish();
     }
 
     @Override
